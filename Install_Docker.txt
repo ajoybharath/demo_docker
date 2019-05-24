@@ -1,0 +1,81 @@
+Debian/Ubuntu and other derivatives
+
+$ sudo apt update
+
+$ sudo apt-get install docker-ce
+
+$ sudo docker run hello-world
+
+
+Redhat/AMI/Centos - 7
+
+Type the following command to install Docker via yum provided by Red Hat:
+
+$ sudo yum install docker
+
+Type the following command to install the latest version of Docker CE (community edition):
+
+$sudo yum remove docker docker-common docker-selinux docker-engine
+
+$ sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+
+$ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+$ sudo yum install docker-ce
+
+$ sudo systemctl enable docker.service
+
+TO run docker as user:
+
+$ sudo groupadd docker (if it's not there)
+
+$ sudo usermod -aG docker $USER
+
+$ docker run hello-world (if docker is run as root you need sudo prefixed to this command)
+
+For MacOS users:
+
+https://docs.docker.com/docker-for-mac/install/
+
+For Windows users:
+
+https://docs.docker.com/docker-for-windows/install/
+
+To test the docker installation
+
+$ docker run hello-world
+
+$ sudo systemctl start docker.service ## <-- Start docker ##
+$ sudo systemctl stop docker.service ## <-- Stop docker ##
+$ sudo systemctl restart docker.service ## <-- Restart docker ##
+$ sudo systemctl status docker.service ## <-- Get status of docker ##
+$ ip a list docker0 ## <-- Get status of default docker bridge "docker0" ##
+$ docker info <-- Get system wide information about docker ##
+$ docker help | more <-- Get help on docker commands ##
+$ docker ps --help <-- Get help on docker command ps  ##
+$ docker cp --help <-- Get help on docker command cp ##
+
+============ Docker Compose ================
+
+You can run Compose on macOS, Windows, and 64-bit Linux.
+
+Docker Compose relies on Docker Engine for boot strapping, so make sure you have Docker Engine installed.
+
+On desktop systems like Docker Desktop for Mac and Windows, Docker Compose is included as part of those desktop installs.
+
+On Linux systems, first install the Docker for your OS, then follow below instructions on installing Compose on Linux systems.
+
+py-pip, python-dev, libffi-dev, openssl-dev, gcc, libc-dev, and make Install these packages as per your linux distro
+
+$ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+To install a different version of Compose, substitute 1.24.0 with the version of Compose you want to use. (if in case there is dependency issues)
+
+$ sudo chmod +x /usr/local/bin/docker-compose
+
+Test the installation:
+
+$ $ docker-compose --version
+docker-compose version 1.24.0, build 1110ad01
+
+[Another way of installation is using pip, $ sudo pip install docker-compose]
