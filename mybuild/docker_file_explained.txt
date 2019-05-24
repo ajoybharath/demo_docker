@@ -26,8 +26,6 @@ The build command results in a new image that you can start using docker run, ju
 
 To build a simple image to host LAMP services in acontainer is added in this repo,
 
-demo_cm
-
 
 # cd mybuild 
 
