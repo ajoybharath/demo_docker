@@ -1,0 +1,6 @@
+docker compose to boot strap a lamp stack
+
+Linux
+Apache
+MySQL
+PHP

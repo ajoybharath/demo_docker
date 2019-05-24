@@ -1,0 +1,7 @@
+apt-get install docker docker-compose
+
+if it doesn't exists
+$ mkdir DocumentRoot
+$ echo "<?php phpinfo(); ?>" > DocumentRoot/index.php
+
+# docker-compose up
