@@ -1,0 +1,9 @@
+-C demo-script
+--prefix /usr/local/bin/
+--rpm-summary "Script to Get info of the OS"
+--description "This RPM is used to get info about the host OS"
+--license "MIT"
+--url "https://github.com/ajoybharath/demo_docker"
+--rpm-user root
+--rpm-group root
+--rpm-attr "0755,root,root:/usr/local/bin/demo-script"

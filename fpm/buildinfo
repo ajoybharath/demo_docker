@@ -1,0 +1,4 @@
+NAME=demo-script
+VERSION=1.0
+ITERATION=0
+ARCH=x86_64
