@@ -1,5 +1,5 @@
 FROM mservice/base:latest
 
-ADD . /home/microservice/app
+ADD . /home/<>/app
 
-ENTRYPOINT ["/home/microservice/app/boot.sh"]
+ENTRYPOINT ["/home/<>/app/boot.sh"]
