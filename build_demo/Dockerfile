@@ -9,7 +9,7 @@ MAINTAINER Ajoy Bharath "ajoybharath@gmail.com"
 RUN apk add --update python py-pip
 
 # Install app dependencies
-RUN pip install Flask
+RUN pip install -r requirements.txt
 
 # Bundle app source
 COPY simpleapp.py /src/simpleapp.py
