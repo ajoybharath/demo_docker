@@ -91,6 +91,18 @@ Once ran execute curl to the exposed port on to localhost to test the app
 
 # curl http://localhost:8000
 
+$ docker run -d -p 5000:5000 --restart=always --name myregistry registry:2
+
+$ docker tag <imgname>:tag localhost:5000/<imgname>:tag
+
+$ docker push localhost:5000/<imgname>:tag
+
+$ docker image remove <imgname>:tag
+$ docker image remove llocalhost:5000/<imgname>:tag
+
+$ docker push localhost:5000/<imgname>:tag
+
+$ docker stop myregistry
 
 More Details in the URLs below:
 
@@ -103,3 +115,5 @@ https://docs.docker.com/compose/compose-file/
 https://docs.docker.com/develop/sdk/
 
 https://docs.docker.com/develop/sdk/examples/
+
+https://docs.docker.com/registry/
