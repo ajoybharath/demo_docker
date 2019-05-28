@@ -1,5 +1,5 @@
 #!/bin/bash -x
-cd /home/microservice/app/
+cd /home/akbharat/app/
 
 npm install
 
