@@ -2,4 +2,4 @@ FROM mservice/base:latest
 
 ADD . /home/<>/app
 
-ENTRYPOINT ["/home/<>/app/boot.sh"]
+ENTRYPOINT ["/home/akbharat/app/boot.sh"]
