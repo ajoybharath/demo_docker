@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  server:
+    image: alpine
+    command: sh -c "echo Launching server && exec tail -f /dev/null"
+  worker:
+    image: alpine
+    command: sh -c "echo Launching worker >> /data/worker.log && exec tail -f /dev/null"
+    volumes:
+      - ./data:/data
